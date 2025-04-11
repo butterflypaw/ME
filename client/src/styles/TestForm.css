@@ -1,0 +1,332 @@
+/* styles/Thyroid.css */
+.thyroid-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+  }
+  
+  .thyroid-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4a90e2;
+  }
+  
+  .thyroid-header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+  
+  .thyroid-header p {
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .thyroid-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 20px 0;
+  }
+  
+  .form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .assessment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4a90e2;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-text {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input, 
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .question-container h3 {
+    margin-bottom: 5px;
+    color: #4a90e2;
+  }
+  
+  .info-text {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .slider-container {
+    margin: 20px 0;
+  }
+  
+  .symptom-slider {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  .symptom-slider:hover {
+    opacity: 1;
+  }
+  
+  .symptom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4a90e2;
+    cursor: pointer;
+    margin-top: -8px;
+  }
+  
+  .symptom-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #e0e0e0;
+    border-radius: 2px;
+  }
+  
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .slider-value {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #4a90e2;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .prev-button, 
+  .next-button, 
+  .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .prev-button {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .next-button, 
+  .submit-button {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .prev-button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .next-button:hover, 
+  .submit-button:hover {
+    background-color: #3a80d2;
+  }
+  
+  .submit-button[disabled] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Results styles */
+  .results-container {
+    padding: 20px;
+  }
+  
+  .results-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results-card.recommend-test {
+    border-top: 5px solid #f0ad4e;
+  }
+  
+  .results-card.no-test {
+    border-top: 5px solid #5cb85c;
+  }
+  
+  .results-header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .results-header h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .result-indicator {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .test-recommended {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .test-not-needed {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .results-body {
+    padding: 30px 20px;
+  }
+  
+  .recommendation {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+  }
+  
+  .confidence-meter {
+    margin-bottom: 30px;
+  }
+  
+  .confidence-meter p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .meter-container {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .meter-fill {
+    height: 100%;
+    background-color: #4a90e2;
+  }
+  
+  .confidence-value {
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    color: #4a90e2;
+  }
+  
+  .next-steps {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .next-steps h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .next-steps ul {
+    padding-left: 20px;
+  }
+  
+  .next-steps li {
+    margin-bottom: 10px;
+  }
+  
+  .disclaimer {
+    padding: 15px;
+    background-color: #fff3cd;
+    border-left: 4px solid #f0ad4e;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .reset-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: #3a80d2;
+  }

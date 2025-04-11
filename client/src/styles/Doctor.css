@@ -1,0 +1,162 @@
+/* NearbyHospitals.css */
+
+.hospitals-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hospitals-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 16px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .filter-button {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .filter-button:hover {
+    background-color: #d1d5db;
+  }
+  
+  .filter-button.active {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .hospital-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .hospital-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 6px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .hospital-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hospital-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .hospital-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .distance-badge {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 9999px;
+  }
+  
+  .specialty-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .specialty-tag {
+    font-size: 12px;
+    background-color: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 9999px;
+  }
+  
+  .hospital-address {
+    color: #6b7280;
+    margin: 8px 0;
+  }
+  
+  .hospital-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stars-container {
+    display: flex;
+  }
+  
+  .star {
+    color: #facc15;
+  }
+  
+  .rating-number {
+    margin-left: 4px;
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .phone-link {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .phone-link:hover {
+    text-decoration: underline;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 32px;
+    color: #6b7280;
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media (max-width: 640px) {
+    .hospital-header {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .hospital-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .distance-badge {
+      align-self: flex-start;
+    }
+  }
